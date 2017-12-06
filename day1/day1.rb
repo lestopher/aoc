@@ -1,6 +1,5 @@
 #!/usr/bin/ruby
 
-
 def sum(input)
   input = input.to_s.chars.map(&:to_i)
   prevNum = nil

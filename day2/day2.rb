@@ -14,20 +14,18 @@ def calculate_row(row)
     high = curr_num if curr_num > high
     low = curr_num if curr_num < low
   end
-  puts "#{high} - #{low} = #{high - low}"
   high - low
 end
 
-# checksum = 0
-# test.each_line do |line|
-#   checksum += calculate_row line
-# end
-# puts "checksum: #{checksum}"
+checksum = 0
+test.each_line do |line|
+  checksum += calculate_row line
+end
+puts "checksum: #{checksum}"
 
 spreadsheet = File.open('data').read
 checksum = 0
 spreadsheet.each_line do |line|
-  # puts line
   checksum += calculate_row line
 end
 puts checksum
